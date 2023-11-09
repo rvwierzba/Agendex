@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1>Bem vindo a sua AGENDEX !</h1>
+    <a asp-controller="Home" asp-action="MyCalendar">Ver meu Calendário</a>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <a asp-controller="Event" asp-action="Index"><h3>Eventos</h3></a>
+    </div>
+    <div class="col-md-6">
+        <a asp-controller="Location" asp-action="Index"><h3>Localizações</h3></a>
+    </div>
+</div>
+

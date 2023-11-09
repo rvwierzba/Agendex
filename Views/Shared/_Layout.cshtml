@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sched+Care</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sched_Care.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/morph-theme/bootstrap.css" />
+    <link rel="stylesheet" href="~/morph-theme/custom.min.css" />
+    <link rel="stylesheet" href="~/morph-theme/prism-okaidia.css" />
+
+    <!--Full Calendar Script-->
+    <script src="~/full-calendar/index.global.js"></script>
+    <script src='~/full-calendar/locales-all.global.js'></script>
+    <script src="~/full-calendar/pt-br.global.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+</head>
+<body>
+    <header style="position: absolute; top: 0; width: 100%;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> <img src="~/logo-agendex.png" alt="Logo Sched+Care" style="border-radius:10px;" width="60%" height="60%" /> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                   <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center" style="background-color: #fff;">
+        <div class="container">
+            <img src="~/logo-agendex.png" alt="Logo Sched+Care" style="border-radius:10px;" width="20%" height="20%" />  - &copy; 2023 - Desenvolvido por: <a href="https://www.rvwtech.com.br">RVW tech</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/morph-theme/prism.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
